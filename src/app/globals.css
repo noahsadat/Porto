@@ -3,25 +3,57 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-lightest: 224 224 224; /* #E0E0E0 */
+  --color-light: 177 177 177;    /* #B1B1B1 */
+  --color-medium: 116 116 116;   /* #747474 */
+  --color-dark: 68 68 68;        /* #444444 */
+  --color-darkest: 10 7 8;       /* #0A0708 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --color-lightest: 10 7 8;      /* #0A0708 */
+  --color-light: 68 68 68;       /* #444444 */
+  --color-medium: 116 116 116;   /* #747474 */
+  --color-dark: 177 177 177;     /* #B1B1B1 */
+  --color-darkest: 224 224 224;  /* #E0E0E0 */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--color-darkest));
+  background: rgb(var(--color-lightest));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Starry background styles */
+.star {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 4s infinite;
+  box-shadow: 0 0 3px #ffffff; /* Add glow effect */
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 100s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-40% - 2rem)); }
 }
