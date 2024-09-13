@@ -1,5 +1,5 @@
 import React from 'react';
-import { Listbox, ListboxItem } from "@nextui-org/react";
+import { Listbox, ListboxItem, } from "@nextui-org/react";
 import { Linkedin, Mail, Phone, Github } from "lucide-react";
 
 const ListboxWrapper = ({ children }: { children: React.ReactNode }) => (
@@ -8,7 +8,7 @@ const ListboxWrapper = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-export default function ContactCard() {
+export default function ContactCards() {
   const contacts = [
     {
       key: "linkedin",
