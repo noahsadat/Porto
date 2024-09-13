@@ -50,7 +50,7 @@ export default function AboutCard() {
         transition={{ delay: 0.8 }}
         className="mt-4 text-dark"
       >
-        {"My life&apos;s journey is an ongoing discovery, shaped by diverse cultural experiences, a commitment to disciplined growth, and a strong spiritual foundation, all of which have profoundly influenced my professional and personal endeavors."}
+        {"My life's journey is an ongoing discovery, shaped by diverse cultural experiences, a commitment to disciplined growth, and a strong spiritual foundation, all of which have profoundly influenced my professional and personal endeavors."}
       </motion.p>
     </motion.div>
   );
