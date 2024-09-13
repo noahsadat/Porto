@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --color-lightest: 224 224 224; /* #E0E0E0 */
-  --color-light: 177 177 177;    /* #B1B1B1 */
-  --color-medium: 116 116 116;   /* #747474 */
-  --color-dark: 68 68 68;        /* #444444 */
-  --color-darkest: 10 7 8;       /* #0A0708 */
+  --color-lightest: 242 242 247; /* #F2F2F7 - Light Gray */
+  --color-light: 229 229 234;    /* #E5E5EA - Extra Light Gray */
+  --color-medium: 209 209 214;   /* #D1D1D6 - Mid Gray */
+  --color-dark: 142 142 147;     /* #8E8E93 - Gray */
+  --color-darkest: 72 72 74;     /* #48484A - Dark Gray */
 }
 
 .dark {
-  --color-lightest: 10 7 8;      /* #0A0708 */
-  --color-light: 68 68 68;       /* #444444 */
-  --color-medium: 116 116 116;   /* #747474 */
-  --color-dark: 177 177 177;     /* #B1B1B1 */
-  --color-darkest: 224 224 224;  /* #E0E0E0 */
+  --color-lightest: 28 28 30;    /* #1C1C1E - Dark Gray */
+  --color-light: 44 44 46;       /* #2C2C2E - Gray */
+  --color-medium: 58 58 60;      /* #3A3A3C - Light Gray */
+  --color-dark: 99 99 102;       /* #636366 - Mid Gray */
+  --color-darkest: 242 242 247;  /* #F2F2F7 - Light Gray */
 }
 
 body {

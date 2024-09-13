@@ -29,7 +29,8 @@ const SkillTag = ({ skill, Icon, description, proficiency }: { skill: string; Ic
         >
           <Chip
             startContent={<Icon size={14} />}
-            variant="flat"
+            variant="bordered"
+            radius="sm"
             color="default"
             className="transition-all duration-300 ease-in-out hover:-translate-y-[2px] hover:bg-gradient-to-r from-primary/90 to-primary hover:text-primary-foreground group"
           >
@@ -67,7 +68,7 @@ export default function SkillsCard() {
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-col items-start gap-3">
-        <h4 className="text-xl font-semibold">Skills</h4>
+        <h4 className="text-xl font-semibold">Skills / Hobbies</h4>
       </CardHeader>
       <CardBody>
         <div className="flex flex-wrap gap-2">
