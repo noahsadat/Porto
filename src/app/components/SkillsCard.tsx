@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, CardHeader, CardBody, Chip, Popover, PopoverTrigger, PopoverContent, Progress } from "@nextui-org/react";
-import { Laptop, Code, Server, Database, Cloud, GitBranch, Wifi, Globe, Palette, Terminal } from "lucide-react";
+import { Laptop, Code, Server, Database, Cloud, GitBranch, Wifi, Globe, Palette, } from "lucide-react";
 
 const skills = [
   { name: "JavaScript", icon: Code, description: "Modern ES6+ JavaScript for dynamic web applications", proficiency: 20 },
