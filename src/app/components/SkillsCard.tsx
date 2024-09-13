@@ -14,11 +14,7 @@ const skills = [
   { name: "HTML", icon: Code, description: "Structuring web content with semantic HTML5", proficiency: 95 },
   { name: "CSS", icon: Palette, description: "Styling and layout with modern CSS techniques", proficiency: 85 },
   { name: "TypeScript", icon: Code, description: "Typed superset of JavaScript for larger applications", proficiency: 80 },
-  { name: "GraphQL", icon: Wifi, description: "Efficient data querying and manipulation", proficiency: 70 },
-  { name: "Docker", icon: Cloud, description: "Containerization for consistent development and deployment", proficiency: 65 },
-  { name: "PostgreSQL", icon: Database, description: "Robust relational database management", proficiency: 75 },
   { name: "Tailwind CSS", icon: Palette, description: "Utility-first CSS framework for rapid UI development", proficiency: 90 },
-  { name: "Bash", icon: Terminal, description: "Shell scripting for automation and system tasks", proficiency: 70 },
 ];
 
 const SkillTag = ({ skill, Icon, description, proficiency }: { skill: string; Icon: React.ElementType; description: string; proficiency: number }) => {

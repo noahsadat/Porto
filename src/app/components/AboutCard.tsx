@@ -1,5 +1,6 @@
 import { Avatar, Divider } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import ThemeSwitch from "@/app/components/ThemeToggle";
 
 export default function AboutCard() {
   return (
@@ -7,8 +8,11 @@ export default function AboutCard() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="p-2"
+      className="p-2 relative"
     >
+      <div className="absolute top-2 right-2">
+        <ThemeSwitch />
+      </div>
       <div className="flex items-center space-x-6 mb-2">
         <motion.div
           initial={{ scale: 0 }}
