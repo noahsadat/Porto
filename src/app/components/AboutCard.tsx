@@ -39,7 +39,7 @@ export default function AboutCard() {
             transition={{ delay: 0.6 }}
             className="text-sm text-dark"
           >
-            {"I'm"} {/* or "I&apos;m" */}
+            Frontend Developer | Content & PIM manager
           </motion.p>
         </div>
       </div>
