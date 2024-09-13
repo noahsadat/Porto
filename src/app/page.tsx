@@ -4,7 +4,7 @@ import { Card } from "@nextui-org/react";
 import AboutCard from "@/app/components/AboutCard";
 import ContactCards from "@/app/components/ContactCard";
 import Experience from "@/app/components/Experience";
-import Skills from "@/app/components/Skills";
+import SkillsCard from "@/app/components/SkillsCard";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -55,13 +55,15 @@ export default function Home() {
           </motion.div>
           
           <motion.div variants={cardVariants}>
-            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg">
+            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
               <Experience />
             </Card>
           </motion.div>
-          
+
           <motion.div variants={cardVariants}>
-            <Skills />
+            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
+              <SkillsCard />
+            </Card>
           </motion.div>
         </motion.div>
       </div>

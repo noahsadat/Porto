@@ -2,7 +2,7 @@ import React from 'react';
 import { Listbox, ListboxItem, cn } from "@nextui-org/react";
 import { Linkedin, Mail, Phone, Github } from "lucide-react";
 
-const ListboxWrapper = ({ children }) => (
+const ListboxWrapper = ({ children }: { children: React.ReactNode }) => (
   <div className="border-small px-1 py-2 rounded-small border-default-200 dark:border-default-100">
     {children}
   </div>
@@ -44,7 +44,9 @@ export default function ContactCards() {
         onAction={(key) => {
           const contact = contacts.find(c => c.key === key);
           if (contact && !contact.disabled) {
-            contact.action();
+            if ('action' in contact && typeof contact.action === 'function') {
+              contact.action();
+            }
           }
         }}
       >
