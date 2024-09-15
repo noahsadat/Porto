@@ -14,8 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-lightest">
-      <body>
+    <html lang="en" suppressHydrationWarning className="bg-lightest bg-dotted-pattern">
+      <body className="relative">
+        <div className="fixed inset-0 bg-dotted-pattern pointer-events-none"></div>
         <Providers>
           <Header />
           <main className="pt-16">

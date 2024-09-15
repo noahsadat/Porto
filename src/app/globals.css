@@ -57,3 +57,8 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-40% - 2rem)); }
 }
+
+.bg-dotted-pattern {
+  background-image: radial-gradient(rgb(var(--color-darkest) / 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

@@ -43,25 +43,25 @@ export default function Home() {
           animate="visible"
         >
           <motion.div variants={cardVariants}>
-            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
+            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
               <AboutCard />
             </Card>
           </motion.div>
           
           <motion.div variants={cardVariants}>
-            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
+            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
               <ContactCards />
             </Card>
           </motion.div>
           
           <motion.div variants={cardVariants}>
-            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
+            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
               <Experience />
             </Card>
           </motion.div>
 
           <motion.div variants={cardVariants}>
-            <Card className="bg-light/40 backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
+            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
               <SkillsCard />
             </Card>
           </motion.div>
