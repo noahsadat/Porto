@@ -42,29 +42,13 @@ export default function Home() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div variants={cardVariants}>
-            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
-              <AboutCard />
-            </Card>
-          </motion.div>
-          
-          <motion.div variants={cardVariants}>
-            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
-              <ContactCards />
-            </Card>
-          </motion.div>
-          
-          <motion.div variants={cardVariants}>
-            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
-              <Experience />
-            </Card>
-          </motion.div>
-
-          <motion.div variants={cardVariants}>
-            <Card className="backdrop-blur-sm border border-darkest/10 p-4 shadow-lg h-full">
-              <SkillsCard />
-            </Card>
-          </motion.div>
+          {[AboutCard, ContactCards, Experience, SkillsCard].map((Component, index) => (
+            <motion.div key={index} variants={cardVariants}>
+              <Card className="bg-light/50 p-4 h-full transition-all duration-300 ease-out hover:hover:scale-[1.02]">
+                <Component />
+              </Card>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </div>
