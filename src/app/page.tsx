@@ -12,22 +12,22 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
     }
   }
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.9 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
       type: "spring",
       stiffness: 100,
-      damping: 12,
-      duration: 0.6
+      damping: 20,
+      duration: 0.8,
     }
   }
 };
@@ -43,8 +43,15 @@ export default function Home() {
           animate="visible"
         >
           {[AboutCard, ContactCards, Experience, SkillsCard].map((Component, index) => (
-            <motion.div key={index} variants={cardVariants}>
-              <Card className="bg-light/50 p-4 h-full transition-all duration-300 ease-out hover:hover:scale-[1.02]">
+            <motion.div 
+              key={index} 
+              variants={cardVariants}
+              whileHover={{ 
+                scale: 1.02, 
+                transition: { type: "spring", stiffness: 300, damping: 10 } 
+              }}
+            >
+              <Card className="bg-lightest/70 p-4 h-full">
                 <Component />
               </Card>
             </motion.div>
