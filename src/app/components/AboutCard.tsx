@@ -15,19 +15,17 @@ const slideInVariants = {
 
 export default function AboutCard() {
   const [text, setText] = useState("");
-  const fullText = "My life's journey is an ongoing discovery, shaped by diverse cultural experiences, a commitment to disciplined growth, and a strong spiritual foundation, all of which have profoundly influenced my professional and personal endeavors.";
+  const fullText = "My life’s journey is an ongoing discovery, shaped by diverse cultural experiences, a commitment to disciplined growth, and a strong spiritual foundation, all of which have profoundly influenced my professional and personal endeavors.";
 
   useEffect(() => {
     let i = 0;
     const typingInterval = setInterval(() => {
-      if (i < fullText.length) {
-        setText((prev) => prev + fullText.charAt(i));
-        i++;
-      } else {
+      setText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) {
         clearInterval(typingInterval);
       }
     }, 20);
-
     return () => clearInterval(typingInterval);
   }, []);
 
